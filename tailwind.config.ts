@@ -19,6 +19,26 @@ const config: Config = {
       },
     },
     extend: {
+      fontFamily: {
+        sans: [
+          '"Open Sans"',
+          "-apple-system",
+          "BlinkMacSystemFont",
+          '"Segoe UI"',
+          '"Helvetica Neue"',
+          "Arial",
+          "sans-serif",
+        ],
+        body: [
+          '"Open Sans"',
+          "-apple-system",
+          "BlinkMacSystemFont",
+          '"Segoe UI"',
+          '"Helvetica Neue"',
+          "Arial",
+          "sans-serif",
+        ],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

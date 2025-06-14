@@ -522,7 +522,7 @@ export default function MarceloMatosKarateLanding() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
               <Image
-                src="/placeholder.svg?height=500&width=400&text=Sensei+Marcelo+Matos"
+                src="/sensei-marcelo-matos.jpg?height=500&width=400&text=Sensei+Marcelo+Matos"
                 alt="Sensei Marcelo Matos"
                 width={400}
                 height={500}
