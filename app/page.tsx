@@ -10,10 +10,8 @@ import {
   Heart,
   Shield,
   Users,
-  Star,
   CheckCircle,
   MapPin,
-  Phone,
   Instagram,
   ArrowRight,
   Zap,
@@ -24,9 +22,10 @@ import {
   TrendingUp,
   ChevronRight,
   ChevronLeft,
+  Mail,
 } from "lucide-react"
 
-import { FaWhatsapp } from "react-icons/fa"
+import { FaWhatsapp, FaFacebook } from "react-icons/fa"
 
 export default function MarceloMatosKarateLanding() {
   const [selectedBelt, setSelectedBelt] = useState(0)
@@ -37,7 +36,6 @@ export default function MarceloMatosKarateLanding() {
       name: "Faixa Branca",
       color: "bg-white border-2 border-gray-300",
       textColor: "text-gray-800",
-      time: "Início",
       skills: ["Postura básica", "Primeiros movimentos", "Disciplina inicial"],
       description:
         "O começo da jornada. Aqui você aprende os fundamentos do Karate Shotokan, incluindo postura, respiração e os primeiros movimentos. É o momento de construir as bases para todo o seu desenvolvimento futuro.",
@@ -47,7 +45,6 @@ export default function MarceloMatosKarateLanding() {
       name: "Faixa Amarela",
       color: "bg-yellow-500 border-2 border-yellow-500",
       textColor: "text-yellow-900",
-      time: "3-6 meses",
       skills: ["Katas básicos", "Técnicas de defesa", "Concentração"],
       description:
         "Sua primeira evolução! Na faixa amarela, você já domina os movimentos básicos e começa a aprender katas simples. Sua confiança cresce junto com sua habilidade técnica, e você já sente os benefícios físicos e mentais do treinamento.",
@@ -57,7 +54,6 @@ export default function MarceloMatosKarateLanding() {
       name: "Faixa Laranja",
       color: "bg-orange-600 border-2 border-orange-600",
       textColor: "text-white",
-      time: "9-12 meses",
       skills: ["Combinações", "Equilíbrio avançado", "Resistência"],
       description:
         "Na faixa laranja, você já executa combinações de golpes e defesas com maior fluidez. Seu equilíbrio melhora significativamente, assim como sua resistência física. Você começa a entender a filosofia por trás dos movimentos.",
@@ -67,7 +63,6 @@ export default function MarceloMatosKarateLanding() {
       name: "Faixa Verde",
       color: "bg-emerald-600 border-2 border-green-700",
       textColor: "text-white",
-      time: "15-18 meses",
       skills: ["Sparring controlado", "Autodefesa efetiva", "Liderança"],
       description:
         "Um marco importante! Na faixa verde, você já é capaz de aplicar técnicas em situações reais de sparring controlado. Sua autodefesa se torna efetiva e você começa a desenvolver qualidades de liderança, ajudando os iniciantes.",
@@ -77,7 +72,6 @@ export default function MarceloMatosKarateLanding() {
       name: "Faixa Roxa",
       color: "bg-violet-600 border-2 border-purple-700",
       textColor: "text-white",
-      time: "21-24 meses",
       skills: ["Técnicas avançadas", "Filosofia marcial", "Mentoria"],
       description:
         "Na faixa roxa, você domina técnicas avançadas e aprofunda seu conhecimento na filosofia do Karate. Você se torna um exemplo para os alunos mais novos e começa a entender o verdadeiro significado do caminho marcial.",
@@ -87,7 +81,6 @@ export default function MarceloMatosKarateLanding() {
       name: "Faixa Marrom",
       color: "bg-yellow-800 border-2 border-amber-900",
       textColor: "text-white",
-      time: "27-30 meses",
       skills: ["Domínio técnico", "Preparação para preta", "Ensino"],
       description:
         "A última etapa antes da faixa preta. Você demonstra excelência técnica e compreensão profunda do Karate. Neste estágio, você já participa ativamente do ensino e se prepara intensamente para o desafio da faixa preta.",
@@ -97,7 +90,6 @@ export default function MarceloMatosKarateLanding() {
       name: "Faixa Preta",
       color: "bg-gray-900 border-2 border-gray-700",
       textColor: "text-white",
-      time: "3+ anos",
       skills: ["Maestria", "Filosofia completa", "Transformação total"],
       description:
         "A faixa preta não é o fim, mas o verdadeiro início da sua jornada. Representa não apenas maestria técnica, mas transformação pessoal completa. Como faixa preta, você encarna os valores do Karate: disciplina, respeito, perseverança e excelência.",
@@ -143,37 +135,41 @@ export default function MarceloMatosKarateLanding() {
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
       <section className="relative bg-black py-16 md:py-20 lg:py-24 px-6 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-red-900/50 via-red-800/20 to-red-900/30"></div>
-
         <div className="container mx-auto relative z-10 max-w-5xl">
           <div className="text-center">
-            <div className="flex justify-center mb-8">
+            <div className="flex justify-center mb-12">
               <Image
                 src="/logo-marcelo-matos.jpg"
                 alt="Escola Marcelo Matos Karate-Do"
-                width={180}
-                height={180}
+                width={280}
+                height={280}
                 className="rounded-xl shadow-2xl"
               />
             </div>
 
-            <Badge className="bg-red-600/20 text-red-400 border-red-600/30 mb-6 px-4 py-2 text-sm">
-              Metodologia Tradicional SKIF Japan
+            <Badge className="bg-red-600/20 text-red-400 border-red-600/30 mb-8 px-6 py-3 text-base font-semibold">
+              KARATE PARA TODOS
             </Badge>
 
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight">
-              TRANSFORME-SE ATRAVÉS DO
-              <span className="block text-red-500 mt-2">KARATE SHOTOKAN</span>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-8 leading-tight">
+              TRANSFORME SUA VIDA COM O<span className="block text-red-500 mt-2">KARATE SHOTOKAN</span>
             </h1>
 
-            <p className="text-xl md:text-2xl mb-4 text-gray-100 max-w-3xl mx-auto">
-              Força, disciplina, saúde e autoconfiança para todas as idades
+            <p className="text-xl md:text-2xl mb-8 text-gray-100 max-w-4xl mx-auto font-semibold">
+              Força, Disciplina, Saúde e Autoconfiança — Para Todas as Idades.
             </p>
 
-            <p className="text-lg md:text-lg mb-10 text-gray-200 max-w-2xl mx-auto leading-relaxed">
-              Na Escola Marcelo Matos Karate, cada treino é uma jornada de evolução. Com metodologia tradicional e
-              acolhimento de verdade, aqui você encontra uma comunidade, valores e inspiração para a vida.
-            </p>
+            <div className="text-lg md:text-xl mb-12 text-gray-200 max-w-4xl mx-auto leading-relaxed space-y-4">
+              <p>Na Escola Marcelo Matos Karate-Do, cada treino é mais do que exercício:</p>
+              <p className="font-semibold text-white">É uma jornada de evolução física, mental e emocional.</p>
+              <p>
+                Com metodologia tradicional, baseada na maior escola de Karate do mundo, acolhimento verdadeiro e uma
+                comunidade que inspira, você encontra muito mais do que um dojo —
+              </p>
+              <p className="font-semibold text-red-400">
+                encontra propósito, valores e inspiração para uma vida plena.
+              </p>
+            </div>
 
             <div className="w-full max-w-md mx-auto">
               <Button
@@ -184,28 +180,171 @@ export default function MarceloMatosKarateLanding() {
                 <div className="flex flex-col items-center justify-center">
                   <div className="flex items-center">
                     <Sparkles className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" />
-                    <span>AULA EXPERIMENTAL</span>
+                    <span>AGENDE SUA AULA EXPERIMENTAL AQUI!</span>
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                   </div>
-                  <span className="text-sm font-normal">100% GRATUITA</span>
                 </div>
               </Button>
             </div>
 
-            <div className="mt-6 flex flex-col space-y-3 text-sm text-gray-300">
-              <div className="flex items-center justify-center space-x-2">
-                <CheckCircle className="w-4 h-4 text-green-400" />
-                <span>100% Gratuita</span>
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              <div className="text-left space-y-4">
+                <p className="text-lg text-gray-200">Não é sobre lutar. É sobre dominar a si mesmo.</p>
+                <p className="text-lg text-white font-semibold">E isso começa no tatame — ou não começa.</p>
+                <p className="text-lg text-gray-200">Se você espera estar pronto pra começar, nunca vai começar.</p>
               </div>
-              <div className="flex items-center justify-center space-x-2">
-                <CheckCircle className="w-4 h-4 text-green-400" />
-                <span>Sem Compromisso</span>
-              </div>
-              <div className="flex items-center justify-center space-x-2">
-                <CheckCircle className="w-4 h-4 text-green-400" />
-                <span>Todas as Idades</span>
+              <div className="text-left space-y-4">
+                <p className="text-lg text-gray-200">A evolução só vem para quem aparece. Não importa a sua idade.</p>
+                <p className="text-lg text-white font-semibold">Quem treina, muda. Quem adia, repete.</p>
+                <p className="text-lg text-red-400 font-semibold">
+                  Primeira aula sem custo. A decisão é sua — como sempre foi.
+                </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Methodology Section */}
+      <section className="py-16 md:py-20 lg:py-24 px-6 bg-white text-black relative overflow-hidden">
+        <div className="container mx-auto max-w-6xl relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-6xl font-black mb-6 text-black">
+              Com orientação certa, você evolui de verdade.
+              <span className="block text-red-600 mt-2">No Karate e na vida.</span>
+            </h2>
+            <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+              Seguir sozinho é andar em círculos. Com uma metodologia estruturada, sua jornada no Karate se transforma
+              em crescimento técnico, mental e pessoal.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Left Column - Method */}
+            <Card className="bg-gray-50 border border-gray-200">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-bold text-red-600 mb-6">
+                  Nosso Método: Tradição Autêntica, Reconhecida Mundialmente
+                </h3>
+                <div className="space-y-6 text-gray-800">
+                  <p className="leading-relaxed">
+                    Na Escola Marcelo Matos Karate-Do, seguimos fielmente a metodologia da Shotokan Karate International
+                    Federation (SKIF) — a maior organização de Karate Shotokan do mundo, com presença em mais de 130
+                    países.
+                  </p>
+                  <p className="leading-relaxed">
+                    A SKIF foi fundada pelo lendário Soke Hirokazu Kanazawa (10º Dan), mestre reconhecido por unir
+                    excelência técnica, filosofia profunda e disciplina rigorosa. No Brasil, seguimos sob orientação da
+                    Shotokan Karate International do Brasil (SKI-Brasil), entidade oficialmente reconhecida e
+                    responsável por representar a SKIF Japão em território nacional.
+                  </p>
+                  <div className="bg-white p-6 rounded-lg">
+                    <h4 className="font-bold text-black mb-4">Nosso método é estruturado sobre esses pilares:</h4>
+                    <ul className="space-y-3">
+                      <li className="flex items-start space-x-3">
+                        <CheckCircle className="w-5 h-5 text-red-600 mt-1 flex-shrink-0" />
+                        <span>Técnica precisa e refinada, fiel aos princípios do Mestre Kanazawa</span>
+                      </li>
+                      <li className="flex items-start space-x-3">
+                        <CheckCircle className="w-5 h-5 text-red-600 mt-1 flex-shrink-0" />
+                        <span>Disciplina, ética e filosofia, aplicadas dentro e fora do dojo</span>
+                      </li>
+                      <li className="flex items-start space-x-3">
+                        <CheckCircle className="w-5 h-5 text-red-600 mt-1 flex-shrink-0" />
+                        <span>Avaliações rigorosas e reconhecidas internacionalmente</span>
+                      </li>
+                      <li className="flex items-start space-x-3">
+                        <CheckCircle className="w-5 h-5 text-red-600 mt-1 flex-shrink-0" />
+                        <span>Pertencimento a uma rede global de praticantes comprometidos com a tradição</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <p className="leading-relaxed font-semibold">
+                    Aqui, você não aprende apenas a lutar — você trilha um caminho verdadeiro de evolução pessoal, com o
+                    respaldo de uma escola mundialmente respeitada.
+                  </p>
+                  <p className="text-red-600 font-bold text-lg">
+                    Karate-Do, como deve ser. Autêntico. Disciplinado. Transformador.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Right Column - Why Choose Us */}
+            <Card className="bg-red-600 text-white border-0">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-bold mb-6">Por que a Escola Marcelo Matos Karate-Do?</h3>
+                <div className="space-y-6">
+                  {[
+                    {
+                      title: "Método Reconhecido Mundialmente",
+                      desc: "Credenciada e filiada à SKI-Brasil, representante oficial da SKIF Japão, a maior escola de Karate Shotokan do mundo.",
+                    },
+                    {
+                      title: "Tradição com Autenticidade",
+                      desc: "Seguimos os ensinamentos do lendário Soke Hirokazu Kanazawa (10º Dan), preservando a essência do verdadeiro Karate-Do Shotokan.",
+                    },
+                    {
+                      title: "Formação Completa",
+                      desc: "Desenvolvemos corpo, mente e espírito — com técnica, ética e disciplina.",
+                    },
+                    {
+                      title: "Treinos para Todas as Idades",
+                      desc: "Crianças, jovens, adultos, idosos e famílias: todos evoluem no seu ritmo, com respeito e propósito.",
+                    },
+                    {
+                      title: "Acompanhamento Próximo dos Senseis",
+                      desc: "Orientação individualizada, com feedback constante e incentivo real à evolução.",
+                    },
+                    {
+                      title: "Ambiente Acolhedor e Familiar",
+                      desc: "Nossa comunidade é mais do que um dojo — é um espaço de apoio, amizade e crescimento mútuo.",
+                    },
+                    {
+                      title: "Progressão Clara e Estruturada",
+                      desc: "Treinos planejados, exames sérios e metas concretas, com padrão internacional.",
+                    },
+                    {
+                      title: "Filosofia Aplicada à Vida",
+                      desc: "Respeito, humildade, coragem e perseverança — valores que formam caráter, não só atletas.",
+                    },
+                    {
+                      title: "Saúde e Bem-Estar Integrados",
+                      desc: "O Karate melhora o condicionamento físico, reduz o estresse e aumenta a autoconfiança.",
+                    },
+                    {
+                      title: "Mais do que Lutar — Viver o Caminho",
+                      desc: "Aqui você não apenas aprende Karate. Você vive o caminho do guerreiro moderno, com propósito e inspiração.",
+                    },
+                  ].map((item, index) => (
+                    <div key={index} className="space-y-2">
+                      <h4 className="font-bold text-lg">
+                        {index + 1}. {item.title}
+                      </h4>
+                      <p className="text-red-100 leading-relaxed">{item.desc}</p>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-8 p-6 bg-black/20 rounded-lg">
+                  <p className="text-xl font-semibold mb-4">Karate não é só luta.</p>
+                  <p className="text-lg mb-4">
+                    É uma jornada de crescimento pessoal que começa no tatame — e se reflete em tudo.
+                  </p>
+                  <p className="text-lg font-semibold">Comece com quem sabe guiar esse caminho.</p>
+                </div>
+
+                <div className="mt-8">
+                  <Button
+                    size="lg"
+                    className="bg-black hover:bg-gray-900 text-white font-bold w-full h-14 text-lg rounded-lg"
+                    onClick={() => window.open("https://wa.me/5521999045826", "_blank")}
+                  >
+                    Iniciar minha jornada de evolução →
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -215,13 +354,10 @@ export default function MarceloMatosKarateLanding() {
         <div className="absolute inset-0 bg-gradient-to-br from-red-900/10 via-transparent to-red-900/5"></div>
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center mb-16">
-            <Badge className="bg-red-600/20 text-red-400 border-red-600/30 mb-6 px-4 py-2 text-sm">
-              SUA JORNADA DE EVOLUÇÃO
-            </Badge>
-            <h2 className="text-3xl md:text-5xl font-black mb-6">
+            <h2 className="text-4xl md:text-6xl font-black mb-6 text-white">
               Sem orientação você <span className="text-red-500">estagna</span>
             </h2>
-            <h3 className="text-3xl md:text-5xl font-black mb-8">
+            <h3 className="text-4xl md:text-6xl font-black mb-8 text-white">
               Com nossa escola você <span className="text-green-400">evolui</span>
             </h3>
           </div>
@@ -388,28 +524,6 @@ export default function MarceloMatosKarateLanding() {
                   </button>
                 </div>
 
-                <div className="flex items-center justify-center space-x-2">
-                  <Badge
-                    className={`${
-                      selectedBelt === 0
-                        ? "bg-white text-gray-800"
-                        : selectedBelt === 1
-                          ? "bg-yellow-500 text-yellow-900"
-                          : selectedBelt === 2
-                            ? "bg-orange-600 text-white"
-                            : selectedBelt === 3
-                              ? "bg-emerald-600 text-white"
-                              : selectedBelt === 4
-                                ? "bg-violet-600 text-white"
-                                : selectedBelt === 5
-                                  ? "bg-yellow-800 text-white"
-                                  : "bg-gray-900 text-white"
-                    } px-4 py-2 text-base`}
-                  >
-                    {beltProgression[selectedBelt].time}
-                  </Badge>
-                </div>
-
                 <p className="text-gray-100 text-lg leading-relaxed">{beltProgression[selectedBelt].description}</p>
 
                 <div className="bg-gray-800 p-6 rounded-lg">
@@ -442,17 +556,11 @@ export default function MarceloMatosKarateLanding() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 md:py-20 lg:py-24 px-6 bg-black relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-red-900/30 via-transparent to-red-900/20"></div>
+      <section className="py-16 md:py-20 lg:py-24 px-6 bg-red-600 relative overflow-hidden">
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center mb-16">
-            <Badge className="bg-red-600/20 text-red-400 border-red-600/30 mb-6 px-4 py-2 text-sm">
-              TRANSFORMAÇÃO COMPLETA
-            </Badge>
-            <h2 className="text-3xl md:text-5xl font-black mb-4">
-              Um espaço para quem quer <span className="text-red-500">evoluir</span>
-            </h2>
-            <p className="text-xl text-gray-200">no corpo, na mente e no espírito</p>
+            <h2 className="text-4xl md:text-6xl font-black mb-4 text-white">CORPO, MENTE E ESPÍRITO.</h2>
+            <p className="text-xl text-red-100">Um espaço para quem quer evoluir</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -490,14 +598,14 @@ export default function MarceloMatosKarateLanding() {
             ].map((benefit, index) => (
               <Card
                 key={index}
-                className="bg-gray-900 border border-gray-700 hover:border-red-500/30 transition-all duration-300 group"
+                className="bg-white/10 border border-white/20 hover:border-white/40 transition-all duration-300 group backdrop-blur-sm"
               >
                 <CardContent className="p-8">
-                  <div className="w-16 h-16 bg-red-600 rounded-lg flex items-center justify-center mb-6 group-hover:bg-red-500 transition-colors">
-                    <benefit.icon className="w-8 h-8 text-white" />
+                  <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center mb-6 group-hover:bg-red-100 transition-colors">
+                    <benefit.icon className="w-8 h-8 text-red-600" />
                   </div>
-                  <h3 className="text-xl font-bold text-red-500 mb-4">{benefit.title}</h3>
-                  <p className="text-gray-200 leading-relaxed text-lg">{benefit.desc}</p>
+                  <h3 className="text-xl font-bold text-white mb-4">{benefit.title}</h3>
+                  <p className="text-red-100 leading-relaxed text-lg">{benefit.desc}</p>
                 </CardContent>
               </Card>
             ))}
@@ -510,19 +618,13 @@ export default function MarceloMatosKarateLanding() {
         <div className="absolute inset-0 bg-gradient-to-br from-red-900/10 via-transparent to-red-900/5"></div>
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center mb-16">
-            <Badge className="bg-red-600/20 text-red-400 border-red-600/30 mb-6 px-4 py-2 text-sm">
-              EXCELÊNCIA E TRADIÇÃO
-            </Badge>
-            <h2 className="text-3xl md:text-5xl font-black mb-4">
-              Por que escolher a <span className="text-red-500">Escola Marcelo Matos?</span>
-            </h2>
-            <p className="text-xl text-gray-200">Compromisso sério com você, com a tradição e com a excelência</p>
+            <h2 className="text-4xl md:text-6xl font-black mb-4 text-white">Sobre Marcelo Matos</h2>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
               <Image
-                src="/sensei-marcelo-matos.jpg?height=500&width=400&text=Sensei+Marcelo+Matos"
+                src="/sensei-marcelo-matos.jpg"
                 alt="Sensei Marcelo Matos"
                 width={400}
                 height={500}
@@ -532,21 +634,27 @@ export default function MarceloMatosKarateLanding() {
 
             <div className="space-y-8 order-1 lg:order-2">
               <div>
-                <h3 className="text-3xl font-bold mb-6 text-red-500">🥋 Sensei Marcelo Matos</h3>
+                <h3 className="text-3xl font-bold mb-6 text-red-500">Quem é o Sensei Marcelo Matos</h3>
                 <p className="text-xl text-gray-100 mb-8">
-                  Com mais de 30 anos dedicados ao Karate, referência em ensino responsável e humano.
+                  Com mais de 35 anos de dedicação ao Karate Shotokan, Sensei Marcelo Matos é referência em educação
+                  tradicional, humano e consciente.
+                </p>
+                <p className="text-lg text-gray-200 mb-8">
+                  Faixa Preta 1º Dan diplomado pela SKIF Japão, é praticante desde 1989, e discípulo dos respeitados e
+                  renomados Senseis Teruo Furusho (8º Dan SKIF, in memoriam) e Elcio Pinto (5º Dan SKIF), atual Diretor
+                  Técnico da SKI-Brasil para a Região Sudeste.
                 </p>
               </div>
 
               <div className="space-y-4">
+                <h4 className="text-xl font-bold text-white mb-4">Além da prática marcial, Sensei Marcelo Matos é:</h4>
                 {[
-                  "Faixa Preta 1º Dan - SKIF Japan",
-                  "Praticante desde 1989 (35+ anos)",
-                  "Preparado em Primeiros Socorros",
-                  "Faixa Azul Jiu-jitsu, Amarela Judô",
-                  "Bacharelando Educação Física",
-                  "Discípulo do Sensei Furusho",
-                  "Supervisão Sensei Elcio Pinto (6º Dan)",
+                  "Bacharelando em Educação Física (UniCesumar)",
+                  "Formando da primeira turma do Brasil do I Curso Profissionalizante de Instrutores de Lutas e Artes Marciais (UFRJ)",
+                  "Certificado em Primeiros Socorros no Dojo (Reconhecido pela CBJJ e IBJJF)",
+                  "Faixa Amarela de Judô",
+                  "Faixa Amarela de Luta Livre",
+                  "Faixa Azul de Jiu-jitsu",
                 ].map((credential, index) => (
                   <div key={index} className="flex items-start space-x-4">
                     <CheckCircle className="w-6 h-6 text-red-500 mt-1 flex-shrink-0" />
@@ -555,12 +663,20 @@ export default function MarceloMatosKarateLanding() {
                 ))}
               </div>
 
+              <div className="bg-gray-800 p-6 rounded-lg">
+                <h4 className="text-lg font-bold text-white mb-4">Mas sua trajetória vai além do tatame:</h4>
+                <p className="text-gray-200 leading-relaxed">
+                  Atuou em cargos de alta gestão nos setores público, privado e terceiro setor. Foi docente no ensino
+                  médio e superior, desenvolvendo habilidades de comunicação, empreendedorismo, formação de pessoas e
+                  liderança.
+                </p>
+              </div>
+
               <div className="bg-gray-800 p-8 rounded-lg border-l-4 border-red-500">
-                <blockquote className="text-xl italic text-gray-100 mb-4">
-                  "Mais do que formar atletas, meu propósito é formar pessoas melhores: mais fortes, disciplinadas e
-                  equilibradas."
-                </blockquote>
-                <cite className="text-red-400 font-bold text-lg">— Sensei Marcelo Matos</cite>
+                <p className="text-lg text-gray-100 leading-relaxed">
+                  Essa combinação única entre experiência marcial, acadêmica e profissional garante um ensino de
+                  qualidade, com visão ampla e sensibilidade humana — respeitando o ritmo e os objetivos de cada aluno.
+                </p>
               </div>
             </div>
           </div>
@@ -568,55 +684,48 @@ export default function MarceloMatosKarateLanding() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-16 md:py-20 lg:py-24 px-6 bg-black relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-red-900/30 via-transparent to-red-900/20"></div>
+      <section className="py-16 md:py-20 lg:py-24 px-6 bg-white text-black relative overflow-hidden">
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center mb-16">
-            <Badge className="bg-red-600/20 text-red-400 border-red-600/30 mb-6 px-4 py-2 text-sm">
-              HISTÓRIAS DE SUCESSO
-            </Badge>
-            <h2 className="text-3xl md:text-5xl font-black mb-4">
-              O que dizem nossos <span className="text-red-500">alunos</span>
+            <h2 className="text-4xl md:text-6xl font-black mb-4 text-black">
+              O que dizem sobre <span className="text-red-600">Marcelo Matos</span>
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
             {[
               {
-                text: "Comecei para melhorar minha saúde, mas encontrei muito mais: autoconfiança, foco e um ambiente acolhedor.",
-                author: "André, 34 anos",
+                text: "Marcelo Matos é meu aluno há mais de uma década, e foi treinado sob minha orientação. Acompanho seu desenvolvimento desde o início da sua jornada, na década de 80. Seu método de ensino é claro, eficaz, e ele tem um talento genuíno para motivar e inspirar seus alunos. É um profissional comprometido com os verdadeiros valores do Karate-Do.",
+                author: "Shihan Elcio Pinto",
+                title: "Faixa Preta, 5º. Dan\nDiretor Técnico da SKI-Brasil para a Região Sudeste",
               },
               {
-                text: "Meu filho era tímido e inseguro. Agora é determinado, respeitoso e feliz com o Karate.",
-                author: "Patrícia, mãe do Pedro",
-              },
-              {
-                text: "Cada treino é uma oportunidade de aprender e evoluir. Me sinto acolhido e desafiado ao mesmo tempo.",
-                author: "Carlos, 27 anos",
+                text: "Toda vez que treinamos juntos no mesmo dojo, Marcelo Matos demonstra notável dedicação e compromisso com o verdadeiro Karate-Do. Estive presente na banca que avaliou sua graduação à faixa preta, e pude atestar sua seriedade, clareza didática e habilidade, e é isso que ele demonstra aos seus alunos. Seu trabalho como instrutor reflete os valores e a tradição que buscamos preservar na SKIF.",
+                author: "Shihan Alex Franklin",
+                title: "Faixa Preta, 5º. Dan\nPresidente da Shotokan Karate International do Brasil (SKI-Brasil)",
               },
             ].map((testimonial, index) => (
-              <Card
-                key={index}
-                className="bg-gray-900 border border-gray-700 hover:border-red-500/30 transition-colors"
-              >
+              <Card key={index} className="bg-gray-50 border border-gray-200">
                 <CardContent className="p-8">
-                  <div className="flex mb-6">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
-                    ))}
-                  </div>
-                  <blockquote className="text-gray-100 italic mb-6 leading-relaxed text-lg">
+                  <blockquote className="text-gray-800 italic mb-6 leading-relaxed text-lg">
                     "{testimonial.text}"
                   </blockquote>
-                  <cite className="font-bold text-white text-lg">{testimonial.author}</cite>
+                  <cite className="font-bold text-red-600 text-lg block">{testimonial.author}</cite>
+                  <p className="text-gray-600 text-sm mt-2 whitespace-pre-line">{testimonial.title}</p>
                 </CardContent>
               </Card>
             ))}
           </div>
 
-          <div className="text-center mt-12">
-            <p className="text-xl text-gray-200">Aqui, cada história importa. Cada conquista é celebrada.</p>
-          </div>
+          <Card className="bg-red-600 text-white border-0">
+            <CardContent className="p-8 text-center">
+              <blockquote className="text-xl italic mb-6 leading-relaxed">
+                "Mesmo sendo faixa branca, me sinto respeitada e parte de algo maior. O Sensei Marcelo Matos ensina com
+                paciência, clareza e muita dedicação. Aprendo mais do que Karate — aprendo a evoluir como pessoa."
+              </blockquote>
+              <cite className="font-bold text-lg">Simone Mendes, aluna faixa branca</cite>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
@@ -652,10 +761,9 @@ export default function MarceloMatosKarateLanding() {
               <div className="flex flex-col items-center justify-center">
                 <div className="flex items-center">
                   <Sparkles className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" />
-                  <span>AULA EXPERIMENTAL</span>
+                  <span>AGENDE SUA AULA EXPERIMENTAL AQUI!</span>
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </div>
-                <span className="text-sm font-normal">100% GRATUITA!</span>
               </div>
             </Button>
           </div>
@@ -682,10 +790,7 @@ export default function MarceloMatosKarateLanding() {
         <div className="absolute inset-0 bg-gradient-to-br from-red-900/10 via-transparent to-red-900/5"></div>
         <div className="container mx-auto max-w-4xl relative z-10">
           <div className="text-center mb-16">
-            <Badge className="bg-red-600/20 text-red-400 border-red-600/30 mb-6 px-4 py-2 text-sm">
-              TIRE SUAS DÚVIDAS
-            </Badge>
-            <h2 className="text-3xl md:text-5xl font-black mb-4">Perguntas frequentes</h2>
+            <h2 className="text-4xl md:text-6xl font-black mb-4 text-white">Perguntas frequentes</h2>
           </div>
 
           <Accordion type="single" collapsible className="space-y-6">
@@ -703,7 +808,7 @@ export default function MarceloMatosKarateLanding() {
               {
                 question: "É seguro para crianças?",
                 answer:
-                  "✅ Sim. Metodologia segura, respeitando o desenvolvimento motor e emocional, com preparação em Primeiros Socorros.",
+                  "✅ Sim. Nossa metodologia é segura e respeita cada fase do desenvolvimento infantil — físico, emocional e cognitivo.\n\nSeguimos os princípios da pedagogia do movimento, promovendo o aprendizado de forma lúdica, disciplinada e respeitosa.\n\nTodos os instrutores são capacitados e têm formação em Primeiros Socorros, garantindo um ambiente de treino seguro, acolhedor e preparado.",
               },
               {
                 question: "Qual é a idade mínima para treinar?",
@@ -712,7 +817,7 @@ export default function MarceloMatosKarateLanding() {
               {
                 question: "O que é o Karate Shotokan?",
                 answer:
-                  "✅ Um dos estilos mais tradicionais do Karate, com ênfase em técnica, disciplina e filosofia. Seguimos a metodologia SKIF Japan.",
+                  "✅ Um dos estilos mais tradicionais do Karate, dá ênfase na técnica refinada, disciplina e filosofia de vida. Seguimos a metodologia da Shotokan Karate International Federation (SKIF) Japão, referência como a maior escola de Karate Shotokan do mundo.",
               },
               {
                 question: "Como faço para agendar a aula experimental?",
@@ -724,7 +829,9 @@ export default function MarceloMatosKarateLanding() {
                 <AccordionTrigger className="text-left hover:no-underline hover:text-red-400 font-semibold py-8 text-lg">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-gray-100 leading-relaxed pb-8 text-lg">{faq.answer}</AccordionContent>
+                <AccordionContent className="text-gray-100 leading-relaxed pb-8 text-lg whitespace-pre-line">
+                  {faq.answer}
+                </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
@@ -754,10 +861,9 @@ export default function MarceloMatosKarateLanding() {
               <div className="flex flex-col items-center justify-center">
                 <div className="flex items-center">
                   <Sparkles className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" />
-                  <span>AULA EXPERIMENTAL</span>
+                  <span>AGENDE SUA AULA EXPERIMENTAL AQUI!</span>
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </div>
-                <span className="text-sm font-normal">GRATUITA AGORA!</span>
               </div>
             </Button>
           </div>
@@ -765,11 +871,11 @@ export default function MarceloMatosKarateLanding() {
           <p className="text-xl text-gray-300 mb-16">Venha fazer parte da nossa família!</p>
 
           {/* Contact Information */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             <div className="text-center p-8 bg-gray-900 rounded-lg border border-gray-700 hover:border-red-500/30 transition-colors">
               <MapPin className="w-10 h-10 text-red-500 mx-auto mb-4" />
               <h3 className="font-bold mb-3 text-white text-lg">Endereço</h3>
-              <p className="text-gray-200 text-base leading-relaxed">
+              <p className="text-gray-200 text-base leading-relaxed mb-6">
                 Casa dos Poveiros
                 <br />
                 Rua do Bispo, 302
@@ -778,28 +884,109 @@ export default function MarceloMatosKarateLanding() {
                 <br />
                 CEP: 20261-068
               </p>
+              {/* Google Maps Embed */}
+              <div className="w-full h-64 rounded-lg overflow-hidden">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.0234567890123!2d-43.2345678!3d-22.9234567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997e5c0123456789%3A0x1234567890abcdef!2sRua%20do%20Bispo%2C%20302%20-%20Tijuca%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2020261-068!5e0!3m2!1spt-BR!2sbr!4v1234567890123!5m2!1spt-BR!2sbr"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Localização da Escola Marcelo Matos Karate-Do"
+                ></iframe>
+              </div>
             </div>
 
             <div className="text-center p-8 bg-gray-900 rounded-lg border border-gray-700 hover:border-red-500/30 transition-colors">
-              <Phone className="w-10 h-10 text-red-500 mx-auto mb-4" />
-              <h3 className="font-bold mb-3 text-white text-lg">WhatsApp</h3>
-              <a
-                href="https://wa.me/5521999045826"
-                className="text-gray-200 hover:text-red-400 transition-colors text-base"
-              >
-                +55 21 99904-5826
-              </a>
+              <h3 className="font-bold mb-6 text-white text-lg">Contato</h3>
+              <div className="space-y-6">
+                <div className="flex items-center justify-center space-x-4">
+                  <FaWhatsapp className="w-6 h-6 text-green-500" />
+                  <a
+                    href="https://wa.me/5521999045826"
+                    className="text-gray-200 hover:text-green-400 transition-colors text-base"
+                  >
+                    +55 21 99904-5826
+                  </a>
+                </div>
+                <div className="flex items-center justify-center space-x-4">
+                  <Mail className="w-6 h-6 text-red-500" />
+                  <a
+                    href="mailto:falecom@marcelomatoskarate.com.br"
+                    className="text-gray-200 hover:text-red-400 transition-colors text-base"
+                  >
+                    falecom@marcelomatoskarate.com.br
+                  </a>
+                </div>
+                <div className="flex items-center justify-center space-x-4">
+                  <Instagram className="w-6 h-6 text-pink-500" />
+                  <a
+                    href="https://instagram.com/marcelomatoskarate"
+                    className="text-gray-200 hover:text-pink-400 transition-colors text-base"
+                  >
+                    @marcelomatoskarate
+                  </a>
+                </div>
+                <div className="flex items-center justify-center space-x-4">
+                  <FaFacebook className="w-6 h-6 text-blue-500" />
+                  <a
+                    href="https://www.facebook.com/share/16NhqLu1Km/"
+                    className="text-gray-200 hover:text-blue-400 transition-colors text-base"
+                  >
+                    Facebook
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* School Expansion Section */}
+          <div className="bg-gray-900 rounded-xl p-8 border border-gray-700">
+            <h3 className="text-2xl font-bold text-center mb-6 text-white">
+              Curtiu o modelo? Leve o Karate para sua escola, colégio ou clube!
+            </h3>
+            <p className="text-lg text-gray-200 mb-8 leading-relaxed">
+              Nosso método vai além da luta: desenvolve disciplina, autoconfiança, respeito e saúde física e emocional —
+              tudo de forma segura, divertida e alinhada com princípios pedagógicos.
+            </p>
+            <p className="text-lg text-gray-200 mb-8 leading-relaxed">
+              Com uma abordagem acessível, estruturada e profissional, o Karate-Do pode transformar o ambiente
+              educacional ou esportivo da sua instituição, agregando valor ao seu projeto pedagógico e à formação
+              integral dos alunos.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              {[
+                "Metodologia reconhecida internacionalmente (SKIF Japão)",
+                "Modelo padronizado de operações e excelência",
+                "Desenvolvimento técnico, certificações e amplos recursos educacionais",
+                "Instrutores qualificados certificados pela SKIF",
+                "Atividades adaptadas por faixa etária e contexto escolar",
+                "Participações em campeonatos",
+                "Integração com valores como ética, concentração e superação",
+              ].map((item, index) => (
+                <div key={index} className="flex items-start space-x-3">
+                  <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
+                  <span className="text-gray-200">{item}</span>
+                </div>
+              ))}
             </div>
 
-            <div className="text-center p-8 bg-gray-900 rounded-lg border border-gray-700 hover:border-red-500/30 transition-colors md:col-span-2 lg:col-span-1">
-              <Instagram className="w-10 h-10 text-red-500 mx-auto mb-4" />
-              <h3 className="font-bold mb-3 text-white text-lg">Instagram</h3>
-              <a
-                href="https://instagram.com/marcelomatoskarate"
-                className="text-gray-200 hover:text-red-400 transition-colors text-base"
+            <div className="text-center">
+              <h4 className="text-xl font-bold text-white mb-4">Vamos conversar?</h4>
+              <p className="text-lg text-gray-200 mb-6">
+                Leve a força do Karatê para sua comunidade e colha os resultados no desempenho, no comportamento e na
+                motivação dos seus alunos.
+              </p>
+              <Button
+                size="lg"
+                className="bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-3 rounded-lg"
+                onClick={() => window.open("https://wa.me/5521999045826", "_blank")}
               >
-                @marcelomatoskarat
-              </a>
+                Falar sobre parcerias
+              </Button>
             </div>
           </div>
         </div>
