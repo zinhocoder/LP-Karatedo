@@ -161,7 +161,7 @@ export default function MarceloMatosKarateLanding() {
       skills: ["Maestria", "Filosofia completa", "Transformação total"],
       description:
         "A faixa preta não é o fim, mas o verdadeiro início da sua jornada. Representa não apenas maestria técnica, mas transformação pessoal completa. Como faixa preta, você encarna os valores do Karate: disciplina, respeito, perseverança e excelência.",
-      image: "/faixas/faixa-preta.jpg",
+      image: "/faixas/faixablack.png",
     },
   ]
 
@@ -711,83 +711,99 @@ export default function MarceloMatosKarateLanding() {
       </AnimatedSection>
 
       {/* About Sensei Section */}
-      <AnimatedSection
-        backgroundImage="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-06-14%20at%2012.29.24_f1999f8b.jpg-ZztAFzcyYWYzzUQHQGjybsRLXDt1Kd.jpeg"
-        className="py-12 px-4 md:py-16 lg:py-20 xl:py-24 md:px-6"
-        overlayOpacity="bg-black/85"
-      >
-        <div className="container mx-auto max-w-6xl relative z-10">
-          <div className="text-center mb-12 md:mb-16 px-4">
-            <h2 className="text-2xl md:text-4xl lg:text-6xl font-black mb-3 md:mb-4 text-white">Sobre Marcelo Matos</h2>
-          </div>
+<AnimatedSection
+  backgroundImage="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-06-14%20at%2012.29.24_f1999f8b.jpg-ZztAFzcyYWYzzUQHQGjybsRLXDt1Kd.jpeg"
+  className="py-12 px-4 md:py-16 lg:py-20 xl:py-24 md:px-6"
+  overlayOpacity="bg-black/85"
+>
+  <div className="container mx-auto max-w-6xl relative z-10">
+    <div className="text-center mb-12 md:mb-16 px-4">
+      <h2 className="text-2xl md:text-4xl lg:text-6xl font-black mb-3 md:mb-4 text-white">Sobre Marcelo Matos</h2>
+    </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div className="order-2 lg:order-1 lg:mr-8">
-              <Image
-                src="/sensei-marcelo-matos.jpg"
-                alt="Sensei Marcelo Matos"
-                width={500}
-                height={400}
-                className="w-full max-w-md md:max-w-lg lg:max-w-xl rounded-xl shadow-2xl mx-auto"
-              />
-            </div>
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-start">
+      {/* Imagem e caixa adicional abaixo - visível apenas no desktop */}
+      <div className="order-1 lg:order-1 lg:mr-8 space-y-6">
+        <Image
+          src="/sensei-marcelo-matos.jpg"
+          alt="Sensei Marcelo Matos"
+          width={500}
+          height={400}
+          className="w-full max-w-md md:max-w-lg lg:max-w-xl rounded-xl shadow-2xl mx-auto"
+        />
 
-            <div className="space-y-6 md:space-y-8 order-1 lg:order-2">
-              <div>
-                <h3 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6 text-red-500">
-                  Quem é o Sensei Marcelo Matos
-                </h3>
-                <p className="text-lg md:text-xl text-gray-100 mb-6 md:mb-8">
-                  Com mais de 35 anos de dedicação ao Karate Shotokan, Sensei Marcelo Matos é referência em educação
-                  tradicional, humano e consciente.
-                </p>
-                <p className="text-base md:text-lg text-gray-200 mb-6 md:mb-8">
-                  Faixa Preta 1º Dan diplomado pela SKIF Japão, é praticante desde 1989, e discípulo dos respeitados e
-                  renomados Senseis Teruo Furusho (8º Dan SKIF, in memoriam) e Elcio Pinto (5º Dan SKIF), atual Diretor
-                  Técnico da SKI-Brasil para a Região Sudeste.
-                </p>
-              </div>
-
-              <div className="space-y-3 md:space-y-4">
-                <h4 className="text-lg md:text-xl font-bold text-white mb-3 md:mb-4">
-                  Além da prática marcial, Sensei Marcelo Matos é:
-                </h4>
-                {[
-                  "Bacharelando em Educação Física (UniCesumar)",
-                  "Formando da primeira turma do Brasil do I Curso Profissionalizante de Instrutores de Lutas e Artes Marciais (UFRJ)",
-                  "Certificado em Primeiros Socorros no Dojo (Reconhecido pela CBJJ e IBJJF)",
-                  "Faixa Amarela de Judô",
-                  "Faixa Amarela de Luta Livre",
-                  "Faixa Azul de Jiu-jitsu",
-                ].map((credential, index) => (
-                  <div key={index} className="flex items-start space-x-3 md:space-x-4">
-                    <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-red-500 mt-1 flex-shrink-0" />
-                    <span className="text-gray-100 text-base md:text-lg">{credential}</span>
-                  </div>
-                ))}
-              </div>
-
-              <div className="bg-gray-800/80 p-4 md:p-6 rounded-lg backdrop-blur-sm">
-                <h4 className="text-base md:text-lg font-bold text-white mb-3 md:mb-4">
-                  Mas sua trajetória vai além do tatame:
-                </h4>
-                <p className="text-gray-200 leading-relaxed text-sm md:text-base">
-                  Atuou em cargos de alta gestão nos setores público, privado e terceiro setor. Foi docente no ensino
-                  médio e superior, desenvolvendo habilidades de comunicação, empreendedorismo, formação de pessoas e
-                  liderança.
-                </p>
-              </div>
-
-              <div className="bg-gray-800/80 p-6 md:p-8 rounded-lg border-l-4 border-red-500 backdrop-blur-sm">
-                <p className="text-base md:text-lg text-gray-100 leading-relaxed">
-                  Essa combinação única entre experiência marcial, acadêmica e profissional garante um ensino de
-                  qualidade, com visão ampla e sensibilidade humana — respeitando o ritmo e os objetivos de cada aluno.
-                </p>
-              </div>
-            </div>
-          </div>
+        {/* Caixa visível apenas no desktop */}
+        <div className="hidden lg:block bg-gray-800/80 p-4 md:p-6 rounded-lg backdrop-blur-sm">
+          <h4 className="text-base md:text-lg font-bold text-white mb-3 md:mb-4">
+            Mas sua trajetória vai além do tatame:
+          </h4>
+          <p className="text-gray-200 leading-relaxed text-sm md:text-base">
+            Atuou em cargos de alta gestão nos setores público, privado e terceiro setor. Foi docente no ensino
+            médio e superior, desenvolvendo habilidades de comunicação, empreendedorismo, formação de pessoas e
+            liderança.
+          </p>
         </div>
-      </AnimatedSection>
+      </div>
+
+      {/* Texto e restante das caixas */}
+      <div className="space-y-6 md:space-y-8 order-2 lg:order-2">
+        <div>
+          <h3 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6 text-red-500">
+            Quem é o Sensei Marcelo Matos
+          </h3>
+          <p className="text-lg md:text-xl text-gray-100 mb-6 md:mb-8">
+            Com mais de 35 anos de dedicação ao Karate Shotokan, Sensei Marcelo Matos é referência em educação
+            tradicional, humano e consciente.
+          </p>
+          <p className="text-base md:text-lg text-gray-200 mb-6 md:mb-8">
+            Faixa Preta 1º Dan diplomado pela SKIF Japão, é praticante desde 1989, e discípulo dos respeitados e
+            renomados Senseis Teruo Furusho (8º Dan SKIF, in memoriam) e Elcio Pinto (5º Dan SKIF), atual Diretor
+            Técnico da SKI-Brasil para a Região Sudeste.
+          </p>
+        </div>
+
+        <div className="space-y-3 md:space-y-4">
+          <h4 className="text-lg md:text-xl font-bold text-white mb-3 md:mb-4">
+            Além da prática marcial, Sensei Marcelo Matos é:
+          </h4>
+          {[
+            "Bacharelando em Educação Física (UniCesumar)",
+            "Formando da primeira turma do Brasil do I Curso Profissionalizante de Instrutores de Lutas e Artes Marciais (UFRJ)",
+            "Certificado em Primeiros Socorros no Dojo (Reconhecido pela CBJJ e IBJJF)",
+            "Faixa Amarela de Judô",
+            "Faixa Amarela de Luta Livre",
+            "Faixa Azul de Jiu-jitsu",
+          ].map((credential, index) => (
+            <div key={index} className="flex items-start space-x-3 md:space-x-4">
+              <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-red-500 mt-1 flex-shrink-0" />
+              <span className="text-gray-100 text-base md:text-lg">{credential}</span>
+            </div>
+          ))}
+        </div>
+
+        {/* Caixa visível apenas no mobile - posicionada após todos os textos */}
+        <div className="block lg:hidden bg-gray-800/80 p-4 md:p-6 rounded-lg backdrop-blur-sm">
+          <h4 className="text-base md:text-lg font-bold text-white mb-3 md:mb-4">
+            Mas sua trajetória vai além do tatame:
+          </h4>
+          <p className="text-gray-200 leading-relaxed text-sm md:text-base">
+            Atuou em cargos de alta gestão nos setores público, privado e terceiro setor. Foi docente no ensino
+            médio e superior, desenvolvendo habilidades de comunicação, empreendedorismo, formação de pessoas e
+            liderança.
+          </p>
+        </div>
+
+        <div className="bg-gray-800/80 p-6 md:p-8 rounded-lg border-l-4 border-red-500 backdrop-blur-sm">
+          <p className="text-base md:text-lg text-gray-100 leading-relaxed">
+            Essa combinação única entre experiência marcial, acadêmica e profissional garante um ensino de
+            qualidade, com visão ampla e sensibilidade humana — respeitando o ritmo e os objetivos de cada aluno.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</AnimatedSection>
+
 
       {/* Testimonials */}
       <section className="py-12 px-4 md:py-16 lg:py-20 xl:py-24 md:px-6 bg-white text-black relative overflow-hidden">
@@ -1110,11 +1126,11 @@ export default function MarceloMatosKarateLanding() {
     <div className="flex flex-col items-center text-center space-y-4 md:space-y-6">
       <div className="flex justify-center">
         <Image
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp_Image_2025-06-14_at_12.52.02_cf288812-removebg-preview-Ssz4J02hZgmSLh3RuqRLnre6zeF1yZ.png"
+          src="logo-karate-shotokan-1024x1024.webp"
           alt="SKIF - Shotokan Karate International Federation"
           width={80}
           height={80}
-          className="w-20 h-20 md:w-24 md:h-24 rounded-full"
+          className="w-40 h-40 md:w-24 md:h-24 rounded-full"
         />
       </div>
       <p className="text-gray-300 text-base md:text-lg leading-relaxed max-w-2xl px-4">
